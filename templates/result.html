@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poland</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+
+ </head>
+ <body style="background-color: black; color: white;">
+    <div class="cursor"></div>
+    <section id="code">
+        <div class="titl" style="margin-bottom: 20px; padding: 14px;display: flex;position: relative;" >
+            <a href="{{ url_for('index') }}">
+                <img src="../static/assets/left-arrow.png" style="width: 44px;height: 44px;position: absolute;" alt="back" >
+            </a>
+            <div style="font-family: neo;font-size: 32px;width:100%;padding: 2px;color: antiquewhite;margin-left: 54px;">Poland</div>
+        </div>
+        <h1 class="guied">Paste or enter your code here</h1>
+        <div class="snippet">
+            
+            <form name="passdata" method="post" enctype="multipart/form-data" >
+                <div class="text-area">
+                    <textarea id="code" class="cd" name="Name" rows="26" cols="70" placeholder="Paste or enter your code here"></textarea>
+
+                </div>
+                <p>
+                    <div class="align_btn">
+                        <input type="submit" value="Submit" class="submit_btn" />
+                        <div class="upload-btn-wrapper">
+                            <button class="btn" >upload a file </button>
+                            <input type="file" name="upload_file" />
+                        </div>
+                    </div>
+                </p>
+            </form>
+            
+           
+          <div id="codeBlockContainer" class="snippet">
+            <div class="code-block" style="width: 600px;">
+                
+                <pre><code class="language-javascript">
+                    {{ n | safe }}
+                </code></pre>
+            </div>
+          </div>
+          
+        </div>
+        </div>
+    </section>
+      <div class="summary">
+        <h1>The detected Code is :<span style="color: red"> {{p_rf}}</span></h1>
+      
+     </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                Prism.highlightAll();
+            });
+        </script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

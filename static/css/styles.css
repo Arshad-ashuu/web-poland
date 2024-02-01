@@ -1,0 +1,454 @@
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+ 
+  ::-webkit-scrollbar {
+    display: none;
+}
+  a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    cursor: none;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 60px;
+    z-index: 10;
+}
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 40px 0;
+}
+
+
+.hero-text {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+
+@font-face {
+    font-family: ne;
+    src: url(rebar.ttf);
+}
+.hero-text h1 {
+    font-size: 8vw;
+    line-height: 1;
+    padding: 8px;
+    font-weight: 700;
+    font-family: neo;
+    background-color: #f4d03f;
+    background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@font-face {
+  font-family: eva;
+  src: url(./Evafiya.ttf);
+}
+@font-face {
+  font-family: eva2;
+  src: url(./AestheticRegular-8M5dM.ttf);
+}
+.hero-text h2{
+    font-size: 24px;
+    overflow: hidden; 
+    font-family: eva;
+    font-weight: 600;
+    border-right: .15em solid rgba(19, 103, 9, 0.704); 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  font-family: neo;
+  letter-spacing: .15em;
+  animation: 
+  typing 3.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  
+.cr{
+  color: rgb(54, 119, 239);
+  font: bold;
+  font-size: 32px;
+}
+
+.cursor{
+    position: fixed;
+    width: 36px;
+    height: 32px;
+    margin-left: -40px;
+    margin-top: -20px;
+    border-radius: 50%;
+    border: 2px solid #16a085;
+   
+    transition: transform .3s ease;
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.grow, .grow-small{
+  transform: scale(6);
+  background: #fff;
+  mix-blend-mode: difference;
+  border: none;
+}
+.grow-small{
+  transform: scale(2.5);
+}
+
+.bounce{
+  animation: bounce 1.5s infinite;
+ 
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  
+} 
+.tool{
+  margin-left: 4px;
+ 
+}
+
+  .form_data{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+  }
+
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 28px;
+  }
+  
+  .btn {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0b0b0b;
+    font: bold;
+    background-color: rgb(54, 119, 239);
+    border: #f2b715;
+  }
+  .btnm{
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+  }
+  .btn:hover{
+    background-color: #f9f7f7;
+    
+  }
+
+  .back_bt{
+    width: 48px;
+    color: #fff;
+  }
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+@font-face {
+    font-family: neo;
+    src: url(./Pavelt.ttf);
+}
+
+.guied{
+  font-family: ne;
+    font-size: 38px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .snippet{
+    justify-content: center;
+    display: flex;
+    gap: 16px;
+  }
+  
+ 
+  .submit_btn{
+    border: 2px solid gray;
+    color: rgb(250, 249, 249);
+    background-color: rgb(36, 75, 231);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+  }
+  .align_btn{
+    display: flex;
+    flex-direction: row;
+  }
+  .summary{
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 38px;
+    
+  }
+
+ 
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    resize: none; 
+  }
+  .code-block {
+
+    max-height: 500px; 
+    overflow-y: auto;
+    margin: 0;
+  }
+
+  
+  @media only screen and (max-width: 600px) {
+    .hero-text h1{
+      font-size: 54px;
+      font-weight: 400;
+      margin-top: -228px;
+    }
+    .hero-text h2{
+      font-size: 22px;
+      font-weight: 400;
+      padding: 0;
+      white-space: wrap; 
+      padding: 6px;
+      margin: 12px;
+      
+    }
+   
+    .guied{
+      font-size: 22px;
+      margin-left: 12px;
+    }
+    .snippet{
+      display: flex;
+      flex-direction: column;
+    }
+    .text-area .cd{
+      padding: 10px;
+      font-size: 16px;
+      width: 394px;
+      margin: 14px;
+      border-radius: 8px;
+    }
+    .submit_btn{
+      margin-left: 22px;
+    }
+    
+
+.titl{
+  font-size: 42px;
+}
+    .code-block{
+      display: none;
+    }
+  .summary{
+    font-size: 18px;
+    margin-top: 8px;
+    margin-left: 4px;
+  }
+  }
+ 
+
+  .ag-format-container {
+    width: 1142px;
+    margin: 0 auto;
+  }
+  
+  .ag-courses_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  
+    padding: 50px 0;
+  }
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(33.33333% - 30px);
+    flex-basis: calc(33.33333% - 30px);
+  
+    margin: 0 15px 30px;
+  
+    overflow: hidden;
+  
+    border-radius: 28px;
+  }
+  .ag-courses-item_link {
+    display: block;
+    padding: 30px 20px;
+    background-color: #121212;
+  
+    overflow: hidden;
+  
+    position: relative;
+  }
+  .ag-courses-item_link:hover,
+  .ag-courses-item_link:hover .ag-courses-item_date {
+    text-decoration: none;
+    color: #FFF;
+  }
+  .ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+  }
+  .ag-courses-item_title {
+    min-height: 87px;
+    margin: 0 0 25px;
+  
+    overflow: hidden;
+  
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFF;
+  
+    z-index: 2;
+    position: relative;
+  }
+  .ag-courses-item_date-box {
+    font-size: 18px;
+    color: #FFF;
+  
+    z-index: 2;
+    position: relative;
+  }
+  .ag-courses-item_date {
+    font-weight: bold;
+    color: #f9b234;
+  
+    -webkit-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease
+  }
+  .ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: #f9b234;
+  
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+  
+    border-radius: 50%;
+  
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .ag-courses_item:nth-child(1n) .ag-courses-item_bg {
+    background-color: #3ecd5e;
+  }
+  .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+    background-color: #952aff;
+  }
+  .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+    background-color: #cd3e94;
+  }
+ 
+  .bounce{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 90px;
+   margin-top: -40px;
+  }
+  
+  @media only screen and (max-width: 979px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: calc(50% - 30px);
+      flex-basis: calc(50% - 30px);
+    }
+    .ag-courses-item_title {
+      font-size: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .ag-format-container {
+      width: 96%;
+    }
+  
+  }
+  @media only screen and (max-width: 639px) {
+    .hero-text {
+      height: 78vh;
+      margin-bottom: -30vh;
+    }
+    .bounce{
+      display: none;
+    }
+    .ag-courses_item {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+    .ag-courses-item_title {
+      min-height: 72px;
+      line-height: 1;
+  
+      font-size: 24px;
+    }
+
+    .ag-courses-item_link {
+      padding: 22px 40px;
+    }
+    .ag-courses-item_date-box {
+      font-size: 16px;
+    }
+    .btnm{
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    .ag-courses_box{
+      padding-bottom: 10px;
+    }
+  }
